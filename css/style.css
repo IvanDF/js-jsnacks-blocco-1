@@ -3,3 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    text-align: center;
+}
+
+[class*=jsnack] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: solid 10px #77f;
+    background: #88e;
+    color: #66f;
+    font-size: 22px;
+    font-family: sans-serif;
+}
