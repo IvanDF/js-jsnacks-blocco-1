@@ -33,8 +33,7 @@ if ( primoNumero > secondoNumero ) {
  * JSnack 2
  * 
  *  L’utente inserisce due parole in successione, con due prompt.
- * Il software stampa una stringa contenente prima la parola più
- * corta, uno spazio e poi la parola più lunga.
+ * Il software stampa una stringa contenente prima la parola più corta, uno spazio e poi la parola più lunga.
  * 
  */
 
@@ -63,28 +62,22 @@ if ( primaParola.length > secondaParola.length ) {
  * 
  * JSnack 3
  * 
- *  L’utente inserisce due parole in successione, con due prompt.
- * Il software stampa una stringa contenente prima la parola più
- * corta, uno spazio e poi la parola più lunga.
+ *  Il software deve chiedere per 5 volte all’utente di inserire un numero.
+ * Il programma stampa la somma di tutti i numeri inseriti.
+ * Esegui questo programma con il for.
  * 
  */
 
-//  RICHIESTA DATI
+//  RICHIESTA DAT
+/**
 
+var somma = 0;
 
-
-var primaParola = prompt('Inserisci la prima parola').toLocaleLowerCase().trim() ;
-var secondaParola =  prompt('Inseriscila seconda parola').toLocaleLowerCase().trim() ;
-
-var result = document.getElementById('result');
-
-// CONTROLLO
-if ( primaParola.length > secondaParola.length ) {
-    result.innerHTML = (secondaParola + ' ' + primaParola);
-} else if ( primaParola.length < secondaParola.length ) {
-    result.innerHTML = (primaParola + ' ' + secondaParola);
-} else {
-    result.innerHTML = ('Entrambe le parole hanno la stessa lunghezza');
+for (i = 0; i < 5; i++) {
+    var userNumber = parseInt( prompt('Inserisci un numero') );
+    somma += userNumber
 }
 
- 
+result.innerHTML = ('La somma totale di tutti i numeri é ' + somma);
+
+  */
