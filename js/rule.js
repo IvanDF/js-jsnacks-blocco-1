@@ -81,3 +81,41 @@ for (i = 0; i < 5; i++) {
 result.innerHTML = ('La somma totale di tutti i numeri é ' + somma);
 
   */
+
+
+
+/**\
+ * 
+ * JSnack 4
+ * 
+ *   In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby (Paolo, Fabio, Lorenzo)
+ * Chiedi all’utente il suo nome
+ * Comunicagli se può partecipare o no alla festa.
+ * 
+ */
+
+//  DATABASE
+/**
+
+var invitatiGatsby = ['Paolo', 'Fabio', 'Lorenzo'];
+
+// RICHIESTA DATI
+
+var userCheck = prompt('Inserisci il tuo nome').toLocaleLowerCase().trim();
+
+var verified = false
+
+for (i = 0; i < invitatiGatsby.length; i++) {
+    var userChecked = invitatiGatsby[i];
+    if (userCheck == userChecked) {
+        verified = true
+    }
+}
+
+if (verified == true) {
+    alert('ciao')
+} else {
+    alert('No ciao')
+}
+
+ */
