@@ -1,23 +1,216 @@
+/* GENERAL SETTINGS */
+/* SCROLL SETTINGS NON FUNZIONA CON SAFARI*/
+
+html {
+    scroll-behavior: smooth;  /*  ANIMA LO SCROLL DEI LINK  */
+    scroll-snap-type: y mandatory;  /* ANIMA LO SCROLL DEL MOUSE DEVE AVERE UN FIGLIO CON scroll-snap-align*/
+}
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0; 
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
-    text-align: center;
+    font-family: monospace;
+    background: #9cf;   
 }
 
-[class*=jsnack] {
+[id*=box] {
+    position: relative;
+    height: 100%;
+    border: solid 10px #d75;
+    scroll-snap-align: start    ; /* ANIMA LO SCROLL DEL MOUSE DEVE AVERE UN PADRE CON scroll-snap-type */
+}
+
+/* TYPHOGRAPHY */
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    font-size: 98px;
+    line-height: 5px;
+    height: 40px;
+    color: rgba(7, 32, 143, 0.8);
+    background: #d75;
+}
+
+h3 {
+    padding: 8px 5px 0;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    font-size: 38px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: right;
+    border-top-left-radius: 5px ;
+    border-bottom-left-radius: 5px ;
+    color: rgba(7, 32, 143, 0.8);
+    background: #d75;
+}
+
+h3 span {
+    font-size: 33px;
+}
+
+/* BUTTON */
+
+.btn {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    padding: 10px 5px 10px 30px;
+    font-size: 28px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    color: #d75;
+    background: rgba(7, 32, 143, 0.8);
+    transition: padding .7s ease-in,
+                        color .6s,
+                        background .8s ease-in;
+}
+
+.btn:hover {
+    padding-right: 25px;
+    color: #d75;
+    background: rgba(7, 32, 143, 1);
+}
+
+/* MENU */
+
+.scroll-menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+.scroll-menu li {
+    position: relative;
+    margin: 10px 0;
+}
+
+.scroll-menu li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 5px;
+    width: 40px;
+    background: #d88;
+    transition: width .5s ease-in,
+                        background .5s .3s;
+}
+
+.scroll-menu li:hover::after {
+    width: 105%;
+    background: #d75;
+}
+
+.scroll-menu li.active::after {
+    width: 60px;
+    background: #d75;
+}
+
+.scroll-menu li.active a {
+    color: rgb(34, 51, 126);
+}
+
+.scroll-menu a {
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(7, 32, 143, 0.6);
+    transition: color .5s .2s;
+}
+
+.scroll-menu a:hover {
+    color: rgb(34, 51, 126);
+}
+
+/* RICHIESTE */
+
+.richieste-container {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    border: solid 10px #77f;
-    background: #88e;
-    color: #66f;
-    font-size: 22px;
-    font-family: sans-serif;
+    flex-direction: column;
+}
+
+.richieste {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 8px;
+    background: #d75;
+    color:  rgb(34, 51, 126);
+}
+
+.richieste h4 {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 42px;
+}
+
+.richieste h5 {
+    font-size: 40px;
+    margin: 20px 0 25px 0;
+}
+
+.richieste h5 span {
+    padding: 5px;
+    border-radius: 5px;
+    color:rgb(34, 51, 126);
+    border: solid 3px;
+}
+
+.richieste p {
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.richieste p span[id*=finale] {
+    font-size: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(34, 51, 126);
+    color:#d75;
+}
+
+.richieste p span#risultato-finale {
+    font-size: 32px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(34, 51, 126);
+    color:#d75;
+}
+
+/* BOX 2 */
+#box2 > h3 span {
+    font-size: 34.2px;
+}
+
+/* BOX 3 */
+#box3 > h3 span {
+    font-size: 29px;
+}
+
+/* BOX 4 */
+#box4 > h3 span {
+    font-size: 35px;
+    letter-spacing: 1.8px;
+}
+
+/* BOX 5*/
+#box5 > h3 span {
+    font-size: 29px;
 }
